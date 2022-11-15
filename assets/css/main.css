@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(#009688 0%, #009688 130px, #d9dbd5 130px, #d9dbd5 100%);
+}
+
+.container {
+    position: relative;
+    display: flex;
+    width: 1396px;
+    max-width: 100%;
+    height: calc(100vh - 40px);
+    background: #ffffff;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.06), 0 2px 5px 0 rgba(0,0,0,0.06);
+}
+
+/*-------------------------------
+| Left side styles
+--------------------------------*/
+
+.container .left-side {
+    position: relative;
+    flex: 30%;
+    background: #ffffff;
+    border-right: 1px solid rgba(0,0,0,0.2);
+}
+
+.left-side__header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    width: 100%;
+    height: 60px;
+    background: #ededed;
+}
+
+.user-img {
+    position: relative;
+    overflow: hidden;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.user-img__cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.user-nav__icons {
+    display: flex;
+}
+
+.user-nav__icons li {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    cursor: pointer;
+    color: #51585C;
+    font-size: 1.5rem;
+    margin-left: 22px;
+}
+
+.search-chat {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background: #f6f6f6;
+    padding: 0 16px;
+}
+
+.search-chat div {
+    width: 100%;
+}
+
+.search-chat div input {
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 6px;
+    height: 38px;
+    border-radius: 30px;
+    font-size: 14px;
+    padding-left: 40px;
+}
+
+.search-chat div input::placeholder {
+    color: #bbb;
+}
+
+.search-chat div ion-icon {
+    position: absolute;
+    top: 16px;
+    left: 30px;
+    font-size: 1.2rem;
+    color: rgb(180, 180, 180);
+}
+
+.chat-list {
+    position: relative;
+    height: calc(100% - 110px); /* El cálculo se refiere a restar los dos tamaños de los elementos ya existente en el header*/
+    overflow-y: auto;
+}
+
+.chat-list .chat-list__block {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 16px;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    cursor: pointer;
+}
+
+.chat-list .chat-list__block.active {
+    background: #ebebeb;
+}
+
+.chat-list .chat-list__block:hover {
+    background: #f5f5f5;
+}
+
+
+.chat-list .chat-list__block .chat-list__img-box {
+    position: relative;
+    min-width: 45px;
+    height: 45px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.chat-list .chat-list__block .chat-list__details {
+    position: relative; 
+    width: 100%;
+}
+
+.chat-list .chat-list__block .chat-list__details .details-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.chat-list .chat-list__block .chat-list__details .details-header h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color:#111;
+}
+
+.chat-list .chat-list__block .chat-list__details .details-header .details-time {
+    font-size: 0.75rem;
+    font-weight: 400;
+    color:#111;
+}
+
+.chat-list .chat-list__block.unread .chat-list__details .details-header .details-time {
+    font-size: 0.75rem;
+    font-weight: 400;
+    color:#06d755;
+}
+
+.details-message {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.details-message p {
+    display: -webkit-box;
+    display: box;
+    -webkit-line-clamp: 1;
+    -moz-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    box-orient: vertical;
+    font-size: 0.9rem;
+    color: #aaa;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.details-message strong {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #06d755;
+    color: #fff;
+    min-width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-size: 0.75rem;
+}
+
+/*-------------------------------
+| Right side styles
+--------------------------------*/
+
+.container .right-side {
+    position: relative;
+    flex: 70%;
+    background: #e5ddd5;
+    
+}
+
+.container .right-side::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/assets/img/pattern.png');
+    opacity: 0.06;
+}
