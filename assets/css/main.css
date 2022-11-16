@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'system-ui', sans-serif;
     box-sizing: border-box;
 }
 
@@ -34,7 +34,7 @@ body {
     border-right: 1px solid rgba(0,0,0,0.2);
 }
 
-.left-side__header {
+.header {
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -231,4 +231,121 @@ body {
     height: 100%;
     background: url('/assets/img/pattern.png');
     opacity: 0.06;
+}
+
+.chat-box {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 120px);
+    padding: 48px;
+    overflow-y: auto;
+}
+
+.chat-box__message {
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin: 5px 0;
+}
+
+.chat-box__message p {
+    position: relative;
+    right: 0;
+    text-align: right;
+    max-width: 65%;
+    padding: 12px;
+    background: #dcf8c6;
+    border-radius: 10px;
+    font-size: .9rem;
+}
+
+
+.chat-box__message p::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -12px;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(135deg, #dcf8c6 0%, #dcf8c6 50%, transparent 50%, transparent );
+}
+
+.chat-box__message p span {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.8rem;
+    opacity: .5;
+}
+
+.my-message {
+    justify-content: flex-end;
+}
+
+.friend-message {
+    justify-content: flex-start;
+}
+
+.friend-message p {
+    background: #ffffff;
+    text-align: left;
+}
+
+.chat-box__message.friend-message p::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -12px;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(225deg, #fff 0%, #fff 50%, transparent 50%, transparent );
+}
+
+.user-img__text {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-img__text h4 {
+    font-weight: 400;
+    line-height: 1.2em;   
+    margin-left: 16px;
+}
+
+.user-img__text h4 span {
+    font-size: .8rem;
+    color: #51585C
+}
+
+.chat-box__input {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    background: #f0f0f0;
+    padding: 16px;
+}
+
+.chat-box__input ion-icon {
+    cursor: pointer;
+    font-size: 1.7rem;
+    color: #51585C
+}
+
+.chat-box__input ion-icon:nth-child(1) {
+    margin-right: 15px;
+}
+
+.chat-box__input input {
+    position: relative;
+    width: 90%;
+    margin: 0 20px;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    font-size: 1rem;
 }
